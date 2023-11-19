@@ -38,7 +38,7 @@ test('clicking - decrements the count', () => {
   // Complete the unit test below based on the objective in the line above
   render(<Counter />);
   const initialCount = screen.getByTestId('count');
-  const initialCountInt = parseInt(initialCount.textContent) + 3;
+  const initialCountInt = parseInt(initialCount.textContent) - 3;
   const expected = initialCountInt.toString();
   const minusButton = screen.getByText('-');
   fireEvent.click(minusButton);
